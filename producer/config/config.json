@@ -1,0 +1,17 @@
+{
+  "generator": {
+    "speed_multiplier": 100.0,
+    "time_interval": 0.01
+  },
+  "kafka": {
+    "bootstrap.servers": "localhost:9092",
+    "security.protocol": "SASL_SSL",
+    "sasl.mechanism": "PLAIN",
+    "sasl.username": "user",
+    "sasl.password": "password",
+    "topic": "kafka_test",
+    "acks": "1",
+    "batch.num.messages": "1000",
+    "compression.type": "snappy"
+  }
+}
