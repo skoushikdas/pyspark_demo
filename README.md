@@ -23,9 +23,6 @@ pip install pyspark pandas pymongo openpyxl
 
 Example:
 
-json
-Copy
-Edit
 {
   "generator": {
     "speed_multiplier": 100.0,
