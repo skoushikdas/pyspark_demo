@@ -1,9 +1,7 @@
 import logging
-import time
-from math import trunc
 
-from producer.producer.producer import Producer
-from util.config_loader import load_config
+from producer.kafka_producer.producer import Producer
+from util import load_config
 
 
 if __name__ == "__main__":

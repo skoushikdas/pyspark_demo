@@ -36,7 +36,7 @@ class Producer(User):
         return message
 
     def run(self):
-        logging.info("producer pipeline started")
+        logging.info("kafka_producer pipeline started")
         while True:
             msg = self.publish()
             logging.info(f"message sent: {msg}")

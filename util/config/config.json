@@ -1,0 +1,37 @@
+{
+  "generator": {
+    "speed_multiplier": 100.0,
+    "time_interval": 0.01
+  },
+  "kafka": {
+    "bootstrap.servers": "localhost:9092",
+    "security.protocol": "SASL_SSL",
+    "sasl.mechanism": "PLAIN",
+    "sasl.username": "user",
+    "sasl.password": "password",
+    "topic": "kafka_test",
+    "acks": "1",
+    "batch.num.messages": "1000",
+    "compression.type": "snappy",
+    "key.serializer": "org.apache.kafka.common.serialization.StringSerializer",
+    "value.serializer": "org.apache.kafka.common.serialization.StringSerializer",
+    "startingOffsets": "latest"
+  },
+  "spark": {
+    "app_name": "KafkaConsumer",
+    "master": "local[*]",
+    "jars": "/path/to/mongo-spark-connector_2.12-3.0.1.jar",
+    "log_level": "WARN"
+  },
+  "mongodb": {
+    "uri": "mongodb://localhost:27017",
+    "database": "user_interactions",
+    "collection": "aggregated_metrics",
+    "write_mode": "append"
+  },
+  "aggregation": {
+    "window_duration": "30 seconds",
+    "slide_duration": "10 seconds",
+    "watermark": "1 minute"
+  }
+}
