@@ -27,7 +27,8 @@
     "uri": "mongodb://localhost:27017",
     "database": "user_interactions",
     "collection": "aggregated_metrics",
-    "write_mode": "append"
+    "write_mode": "append",
+    "output_path": "./data"
   },
   "aggregation": {
     "window_duration": "30 seconds",

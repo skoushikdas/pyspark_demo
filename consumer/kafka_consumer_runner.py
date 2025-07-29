@@ -1,3 +1,5 @@
+import logging
+
 from consumer.kafka_consumer.kafka_consumer import KafkaConsumer
 from consumer.sink.mongo_sink_write import MongoSink
 from util.config_loader import load_config
@@ -6,7 +8,7 @@ from util.session import SparkSessionBuilder
 
 def main():
     config = load_config("config.json")
-
+    logging.info("Consumer Pipeline Started -------- ")
     spark = SparkSessionBuilder.create(
         app_name=config["spark"]["app_name"],
         master=config["spark"]["master"],
